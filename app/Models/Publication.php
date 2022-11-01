@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 namespace App\Models;
 
@@ -15,5 +15,10 @@ class Publication extends Model
         'name',
         'active'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 }
